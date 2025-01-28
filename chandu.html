@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Customer Vision</title>
+    <link rel="stylesheet" href="chandu.css">
+</head>
+<body>
+    <h1>Welcome to The Customer Vision</h1>
+    <p>Upload an image for object recognition and prediction.</p>
+
+    <div id="upload-container">
+        <input type="file" id="file-upload" accept="image/*" onchange="handleFileUpload(event)">
+    </div>
+
+    <img id="image-preview" src="" alt="Preview Image">
+
+    <div id="prediction-result"></div>
+
+    <!-- Predict button -->
+    <button id="predict-button" onclick="showImageSelectionDialog()">Predict</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script src="chandu.js"></script>
+</body>
+</html>
